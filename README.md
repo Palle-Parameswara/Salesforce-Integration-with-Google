@@ -91,6 +91,10 @@ Next, let's configure the Named Credential, which provides the connection detail
      - Enable **Allow Callouts**.
      - Enable **Generate Authorization Header**.
    - **Principals**: Add the principals required for authorization, e.g., Named Principal.
+   - Google vision api
+   Named Principal
+   openid
+   
 
 ---
 
