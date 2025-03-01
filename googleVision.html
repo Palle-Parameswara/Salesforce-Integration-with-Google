@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Google Vision API" icon-name="custom:custom14">
+        <div class="slds-p-horizontal_medium">
+            <lightning-input type="file" label="Upload Image" onchange={handleImageUpload}></lightning-input>
+            <lightning-button variant="brand" label="Analyze Image" onclick={handleAnalyzeImage} class="slds-m-top_medium"></lightning-button>
+            <lightning-button variant="neutral" label="Cancel" onclick={handleCancel} class="slds-m-top_medium"></lightning-button>
+
+            <template if:true={imageUrl}>
+                <img src={imageUrl} alt="Image preview" style="max-width:100%; margin-top:10px;"/>
+            </template>
+
+            <template if:true={analysisResult}>
+                <p style="margin-top:15px;"><strong>Analysis Result:</strong></p>
+                <pre>{analysisResult}</pre>
+            </template>
+        </div>
+    </lightning-card>
+</template>
